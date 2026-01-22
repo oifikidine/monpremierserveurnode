@@ -1,0 +1,28 @@
+{
+  "name": "monpremierserveurnode",
+  "version": "1.0.0",
+  "description": "je crée mon premier serveur Node. Le but est d'apprendre à gérer les requêtes http.",
+  "keywords": [
+    "serveur",
+    "node",
+    "javascript"
+  ],
+  "homepage": "https://github.com/oifikidine/monpremierserveurnode#readme",
+  "bugs": {
+    "url": "https://github.com/oifikidine/monpremierserveurnode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oifikidine/monpremierserveurnode.git"
+  },
+  "license": "ISC",
+  "author": "Oifikidine Mohamed",
+  "type": "commonjs",
+  "main": "serveur.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
