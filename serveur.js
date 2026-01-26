@@ -5,11 +5,26 @@ L'instruction requise () permet d'importer le module.
 */
 const http = require('http');
 
-//maintenant, je crée mon serveur en utilisant le package HTTP
-const server = http.createServer((req, res) => {
-    res.end("Bonjour je suis le serveur!");
-});
+// j'importe l'application express app.js
+const app = require('./app');
 
+// je configure le numero du port utiliser dans le serveur 
+app.set('port', 3000);
+
+//maintenant, je crée mon serveur en utilisant le package HTTP
+
+const server = http.createServer(app);
+/* const server = http.createServer((req, res) => {
+    res.end("Bonjour je suis le serveur!");
+ });*/
+
+ // je récupere la date 
+ const date = new Date();
+ let h = date.getUTCHours();
 
 // Je précise l'adresse et le port du serveur
-server.listen(3000);
+server.listen(3000, () => {
+    console.log("Le serveur tourne sur le port 3000.");
+    console.log(date.toLocaleDateString());
+    console.log(h.toLocaleString());
+});
