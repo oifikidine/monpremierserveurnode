@@ -7,9 +7,10 @@ const http = require('http');
 
 // j'importe l'application express app.js
 const app = require('./app');
-
+// je déclare une variable avec le numero du port 
+ const numport = 3200;
 // je configure le numero du port utiliser dans le serveur 
-app.set('port', 3000);
+app.set('port', numport);
 
 //maintenant, je crée mon serveur en utilisant le package HTTP
 
@@ -23,8 +24,8 @@ const server = http.createServer(app);
  let h = date.getUTCHours();
 
 // Je précise l'adresse et le port du serveur
-server.listen(3000, () => {
-    console.log("Le serveur tourne sur le port 3000.");
+server.listen(numport, () => {
+    console.log(`Le serveur tourne sur le port ${numport}`);
     console.log(date.toLocaleDateString());
     console.log(h.toLocaleString());
 });
