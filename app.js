@@ -6,7 +6,7 @@ const express = require('express');
 // j'initialise une application express
 const app = express();
 
-// Middleware pour parser le JSON
+// Middleware pour passer le JSON
 app.use(express.json());
 
 // Middleware généraux

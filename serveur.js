@@ -15,9 +15,7 @@ app.set('port', numport);
 //maintenant, je crée mon serveur en utilisant le package HTTP
 
 const server = http.createServer(app);
-/* const server = http.createServer((req, res) => {
-    res.end("Bonjour je suis le serveur!");
- });*/
+
 
  // je récupere la date 
  const date = new Date();
